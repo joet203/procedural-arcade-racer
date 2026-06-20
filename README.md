@@ -1,14 +1,14 @@
-# Cop Takedown
+# Procedural Arcade Racer
 
-Unity 6 arcade driving game with fully procedural audio, textures, and geometry. Drive a WRX around an oval track, destroy 10 cop cars with a roof-mounted turret to win. Cops have a 5-state AI, there's a combo system with wanted levels, and slow-mo on the final kill.
+Unity 6 arcade driving game with fully procedural audio, textures, and geometry. Drive a WRX around an oval track and take out 10 pursuit cars with a roof-mounted turret to win. Enemies run a 5-state AI, there's a combo system with escalating heat levels, and slow-mo on the final kill.
 
 ## What Makes It Interesting
 
 - **Procedural audio engine** — `BackgroundMusic.cs` (1100+ lines) generates a walking bassline with 24+ patterns, key changes, fills, and percussion entirely at the sample level. `CarAudio.cs` synthesizes engine, exhaust, turbo, tire, and wind sounds. No audio files.
 - **Procedural textures** — `TextureManager.cs` generates asphalt, grass, concrete, and brick textures with normal maps using multi-octave Perlin noise and domain-warped crack patterns.
 - **Procedural car body** — the player's WRX is built from ~40 Unity primitives (body panels, spoiler, hood scoop, headlights, exhaust tips, wheels).
-- **Cop AI state machine** — 5 states (Patrol, Flee, DonutBreak, Pursuit, Chase) with emergent behavior. Cops navigate to random targets, flee when shot, take donut breaks at Dunkin stores, and pursue with ramming and shooting.
-- **Full game loop** — combo system, 4-star wanted level escalation, slow-motion final kill, leaderboard with persistence, restart support.
+- **Enemy AI state machine** — 5 states (Patrol, Flee, PitStop, Pursuit, Chase) with emergent behavior. Enemies navigate to random targets, flee when hit, take pit-stop breaks, and pursue with ramming and shooting.
+- **Full game loop** — combo system, 4-star heat escalation, slow-motion final kill, leaderboard with persistence, restart support.
 
 ## Controls
 
